@@ -9,18 +9,19 @@
     <title>Youtube Iframe</title>
   </head>
   <body class="w-[100dvw] h-[100dvh] bg-[#0f0f0f]">
-    <header
-      class="w-full h-14 border-b-2 border-[#303030] pt-[3px]"
-    >
-      <div class="mx-auto w-[min-content] flex items-center">
+    <header class="w-full h-14 border-b-2 border-[#303030] pt-[3px]">
+      <form class="mx-auto w-[min-content] flex items-center" onsubmit="showYouTubeVideo(event);">
         <input
           type="text"
           placeholder="Paste Youtube URL (e.g. https://www.youtube.com/watch?v=....)"
           id="youtube-video-id"
-          onkeyup="handleKeyUp(event);"
-          class="h-12 border-2 w-[30vw] rounded-l-4xl border-[#303030] text-gray-400 pl-4"
+          required
+          class="h-12 border-2 w-[30vw] rounded-l-4xl border-[#303030] text-gray-400 pl-4 cursor-text"
         />
-        <button class="bg-[#ffffff14] w-16 h-12 flex justify-center items-center rounded-r-4xl" type="button" onclick="showYouTubeVideo();">
+        <button
+          class="bg-[#ffffff14] w-16 h-12 flex justify-center items-center rounded-r-4xl cursor-pointer"
+          type="submit"
+        >
           <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
           <svg
             width="20px"
@@ -38,7 +39,7 @@
             />
           </svg>
         </button>
-      </div>
+      </form>
     </header>
     <main class="w-9/10 h-9/10 mx-auto pt-8">
       <iframe
